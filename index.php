@@ -1,5 +1,5 @@
 <?php
-include_once "junken.php"
+include_once "janken.php"
 $line_accessToken = getenv('LINE_BOT_TOKEN');
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
