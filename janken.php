@@ -35,7 +35,7 @@ function janken($message){
         }
     }
     else{
-        file_put_contents("data.txt", "0");
+        file_put_contents("jankendata.txt", "0");
     }
     return $message;
 }

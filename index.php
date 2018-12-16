@@ -9,13 +9,13 @@ $messageId = $jsonObj->{"events"}[0]->{"message"}->{"id"};
 $message_type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
 $message_recv = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 
-$flg = file_get_contents("data.txt");
+$flg = file_get_contents("jankendata.txt");
 $message = "";
 if($message_type == "text"){
     $message = $message_recv;
     if($message == "じゃんけん"){
         $message = "じゃんけんするぞ";
-        file_put_contents("data.txt", "1");
+        file_put_contents("jankendata.txt", "1");
     }
     else if($flg == "1"){
         $message = janken($message);
